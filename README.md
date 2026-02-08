@@ -25,7 +25,7 @@
 - **DHT22**: GPIO4
 - **Relay/Pump**: GPIO19 (active_high=True)
 
-> Σημείωση: Το ακριβές pinout/καλωδίωση πρέπει να ταιριάζει με το δικό σου breadboard setup.
+
 
 ## Project Structure (ενδεικτικά)
 - `app.py` : Flask web server + API endpoint `/api/history`
@@ -33,7 +33,7 @@
 - `controlled_watering.py` : ελεγχόμενο πότισμα (pulses) για Γλάστρα 2
 - `sensors.py` : ανάγνωση MCP3008 (median filtering) + DHT22
 - `db.py` : SQLite helpers, inserts/fetch (WAL)
-- `db/` : (τοπικά) βάση δεδομένων SQLite (ΔΕΝ ανεβαίνει στο GitHub)
+- `db/` : (τοπικά) βάση δεδομένων SQLite 
 
 ## Sampling / Storage
 - Δειγματοληψία κάθε **90s**
