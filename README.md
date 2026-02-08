@@ -54,3 +54,14 @@
 ```bash
 git clone <YOUR_REPO_URL>
 cd auto_watering
+
+### 1) Clone
+```bash
+git clone <YOUR_REPO_URL>
+cd auto_watering
+2) Virtual environment
+python3 -m venv venv
+source venv/bin/activate
+3) Install dependencies
+pip install -r requirements.txt
+
