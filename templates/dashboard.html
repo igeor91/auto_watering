@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="el">
+<head>
+  <meta charset="utf-8">
+  <title>Auto Watering Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body { font-family: system-ui, Arial, sans-serif; margin: 16px; }
+    .topbar { display: flex; gap: 10px; align-items: center; flex-wrap: wrap;}
+    .chart-wrap{
+      width: 100%;
+      max-width: none;
+      height: 420px;
+      margin: 0 auto;
+    }
+    .chart-wrap canvas{
+      width: 100%;
+      height: 420px;
+      display: block;
+    }
+    canvas { width: 100% !important; height: 420px !important; } /* <-- ΛΙΓΟ ΠΙΟ ΨΗΛΟ */
+    h1 { margin-bottom: 8px; }
+    .controls { display:flex; gap:10px; align-items:center; margin-bottom:10px; flex-wrap: wrap; }
+  </style>
+</head>
+<body>
+  <h1>Dashboard Γλαστρών</h1>
+
+  <div class="topbar">
+    <label for="hoursSelect"><b>Ιστορικό:</b></label>
+    <select id="hoursSelect">
+      <option value="6">Τελευταίες 6 ώρες</option>
+      <option value="12">Τελευταίες 12 ώρες</option>
+      <option value="24" selected>Τελευταίες 24 ώρες</option>
+      <option value="48">Τελευταίες 48 ώρες</option>
+      <option value="72">Τελευταίες 72 ώρες</option>
+    </select>
+
+    <button id="refreshBtn" type="button">Ανανέωση</button>
+  </div>
+  
+  <hr>
+
+  <h2>Υγρασία χώματος</h2>
+  <div class="chart-wrap">
+    <canvas id="soilChart"></canvas>
+  </div>
+  
+  <h2>Θερμοκρασία & Υγρασία αέρα</h2>
+  <div class="chart-wrap">  
+    <canvas id="envChart"></canvas>
+  </div>
+
+  <script src="/static/dashboard.js"></script>
+</body>
+</html>
